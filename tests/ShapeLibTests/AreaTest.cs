@@ -1,19 +1,15 @@
 ﻿using ShapesLib.Shapes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace ShapeLibTest.ShapesTests
+namespace ShapeLib.Test
 {
     public class AreaTest
     {
-        private IShape _shape;
         [Fact]
         public void CheckArea()
         {
+            IShape _shape;
             _shape = new Traingle(4, 5, 2);
             Assert.Equal(3.799671, Math.Round(_shape.GetArea(), 6));
 

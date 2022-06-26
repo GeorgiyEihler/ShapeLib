@@ -1,15 +1,15 @@
 ﻿using ShapesLib.Shapes;
 using Xunit;
 
-namespace ShapeLibTest.ShapesTests
+namespace ShapeLib.Test
 {
     public class IsRectTest
     {
-        private IShape _shape;
-
+        
         [Fact]
         public void IsRect()
         {
+            IShape _shape;
             _shape = new Traingle(3, 4, 5);
             Assert.True(Traingle.IsRightTriangle((Traingle)_shape));
 
