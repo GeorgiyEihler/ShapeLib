@@ -18,7 +18,7 @@ app.MapGet("/", () => "Hello World!");
 app.MapGet("GetCategories/{id?}", (IEshopDataContext context, int? id) =>
     context.Categories.Where(c => id == null || c.Id == id));
 
-app.MapGet("GetProducts", (IEshopDataContext context) =>
+app.MapGet("GetProducts", (IEshopDataContext context) => 
      {
          var result = from p in context.Products
                       from c in context.Categories.Include(x => x.IdProucts).Where(pc => pc.IdProucts.Contains(p)).DefaultIfEmpty()
