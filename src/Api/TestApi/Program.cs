@@ -30,3 +30,4 @@ app.MapGet("GetProducts", async (IEshopDataContext context) =>
 
 
 app.Run();
+  

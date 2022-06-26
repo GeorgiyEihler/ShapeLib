@@ -9,7 +9,7 @@ namespace ShapesLib.Shapes
             return Math.Pow(max[0], 2) == Math.Pow(max[1], 2) + Math.Pow(max[2], 2);
         }
 
-        public static bool CheckTringle(double sideA, double sideB, double sideC)
+        public static bool CheckShape(double sideA, double sideB, double sideC)
         {
             if (sideA <=0 || sideB <= 0 || sideC <= 0)
             {
@@ -28,7 +28,7 @@ namespace ShapesLib.Shapes
         public Traingle(double sideA, double sideB, double sideC)
         {
 
-            if(!CheckTringle(sideA, sideB, sideC))
+            if(!CheckShape(sideA, sideB, sideC))
             {
                 throw new ArgumentException("Неверные параметры");
             }
