@@ -4,6 +4,6 @@ public class Coube : IShape
 {
     public double GetArea()
     {
-        return 100D;
+        return 150D;
     }
 }
